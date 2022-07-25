@@ -1,0 +1,100 @@
+Entendendo o DOM
+
+O que é?
+
+Document Object Model
+
+
+O DOM htmlk é um padrão de como acessar e modificar os elementos
+    html de uma pagina
+
+(Uma arvore de funcionamento do documento html)
+
+
+DOM vs BOM
+
+BOM: Browser Objetc Model 
+
+Tudo dentro da window
+(document -DOM, historico, location, screen, navigator)
+
+----
+
+Metodos DOM
+
+Estrutura HTML 
+
+tag  = oque esta sendo representado
+id = nome atribuido a um objeto
+classe = pode se repetir diferente do id 
+
+selecionando elementos
+
+document.getElementById('');
+    pega o objeto pelo ID 
+
+document.getElementsByTagName('li');
+    pega todos os elemtenos da tag 
+
+document.getElementsByClassName('classe');
+    Pega tudo da classe selecionada
+
+Outro tipo de seletor
+
+    document.querySelectorAll('.primeira-classe .segunda-classe #id);
+        retorna um array com os elementos selecionados na busca
+
+    document.querrySelectorAll('li .opcao');
+
+Adicionar e deletar
+
+document.createElement(elemento)
+document.removeChild
+document.appendChild
+document.replaceChild(new, old)
+
+
+
+-----
+
+Estilos
+
+
+Manipular estilos html
+
+Element.classList
+
+ex:
+
+const meuElemento = document.getElementById("meu-elemento")
+
+meuElemento.classList.add("novo-estilo");
+    adiciona a classe meu estilo 
+
+meuElemento.classList.remove("classe")
+    remove a classe classe 
+
+meuElemento.classList.toggle("dark-mode")
+    adiciona a classe se não existir
+    lista e remove ela caso ela exista~
+
+personalizar o CSS direto do JS
+
+    document.getElementsByTagName("p").style.color = "blue";
+
+-----
+
+Eventos
+
+    Ações do usuário na pagina
+
+Tipos
+    mouseover, mouseout
+    click, dbclick
+    Change, load - atualização
+
+Acionando Eventos
+
+const botao = document.getElementById("meuBotao");
+addEventListener("click", outraFuncao);
+
